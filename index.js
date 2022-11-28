@@ -1,9 +1,16 @@
 require('dotenv').config();
 const express = require('express');
 const db = require('./db/models');
+const authRouter = require('./routes/authRouter');
+const indexRouter = require('./routes/indexRouter');
+const myRouter = require('./routes/myRouter');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use('/', indexRouter);
+app.use('/auth', authRouter);
+app.use('/my', myRouter);
 
 /* eslint-disable no-console */
 app
