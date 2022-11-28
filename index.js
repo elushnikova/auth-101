@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const morgan = require('morgan');
 const db = require('./db/models');
 const authRouter = require('./routes/authRouter');
 const indexRouter = require('./routes/indexRouter');
@@ -7,6 +8,8 @@ const myRouter = require('./routes/myRouter');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(morgan('dev'));
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
