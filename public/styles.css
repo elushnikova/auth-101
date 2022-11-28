@@ -19,3 +19,18 @@ h1,
 .page {
   padding: 20px;
 }
+
+.form {
+  width: 300px;
+}
+
+.form input,
+.form button {
+  padding: 0.5rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}

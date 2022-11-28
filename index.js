@@ -16,6 +16,7 @@ app.locals.title = 'Авторизация 101';
 app.use(morgan('dev'));
 app.use(ssr);
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
