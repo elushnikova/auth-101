@@ -7,12 +7,10 @@ myRouter.get('/', (req, res) => {
 
 // GET /my/profile
 myRouter.get('/my/profile', (req, res) => {
-  res.send('TODO');
-});
-
-// PUT /my/profile
-myRouter.put('/my/profile', (req, res) => {
-  res.send('TODO');
+  res.json({
+    message:
+      'TODO: показать страницу профиля только авторизованному пользователю',
+  });
 });
 
 module.exports = myRouter;

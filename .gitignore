@@ -4,5 +4,8 @@ node_modules
 # Environment variables
 .env
 
+# User generated files
+# sessions
+
 # Miscellaneous
 .DS_Store

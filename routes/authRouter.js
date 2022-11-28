@@ -14,7 +14,7 @@ authRouter.get('/login', (req, res) => {
 
 // POST /auth/login
 authRouter.post('/login', (req, res) => {
-  res.send('TODO');
+  res.json({ message: 'TODO: авторизовать пользователя' });
 });
 
 // GET /auth/register
@@ -24,12 +24,12 @@ authRouter.get('/register', (req, res) => {
 
 // POST /auth/register
 authRouter.post('/register', (req, res) => {
-  res.send('TODO');
+  res.json({ message: 'TODO: создать пользователя' });
 });
 
 // DELETE /auth
 authRouter.delete('/', (req, res) => {
-  res.json({ message: 'TODO' });
+  res.json({ message: 'TODO: удалить сессию' });
 });
 
 module.exports = authRouter;
